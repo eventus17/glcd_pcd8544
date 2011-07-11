@@ -16,7 +16,14 @@
 #include "fixednums7x15.h"       // fixed width font - numerals only 
 #include "fixednums8x16.h"       // fixed width font - numerals only 
 #include "fixednums15x31.h"      // fixed width font - numerals only 
-#include "WebbySmall.h"
-#include "TomThumb.h"
-#include "Tiny.h"
+
+// The following fonts are not part of the stock GLCD distribution
+// All are free for general use; see the individual headers for copyright
+// and source information.
+//
+#include "Proggy.h"		// Fonts from proggyfonts.com
+#include "TomThumb.h"		// A compact (~4x6) terminal-style font
+#include "Tiny.h"		// A very small 4pt font
 #include "F04b.h"		// A family of compact, stylish fonts
+#include "CalHenderson.h"	// Freeware fonts by Cal Henderson
+#include "dictator.h"		// a low-rez font in 4 and 8pts
