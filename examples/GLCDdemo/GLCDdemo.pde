@@ -74,22 +74,23 @@ void  loop()
 
 
 void introScreen(){  
+  GLCD.ClearScreen();
   GLCD.DrawBitmap(icon, GLCD.CenterX - 32 ,0); //draw the bitmap at the given x,y position
   countdown(3);
   GLCD.ClearScreen();
   GLCD.SelectFont(LARGE_FONT); // you can also make your own fonts, see playground for details   
-  GLCD.CursorToXY(GLCD.Width/2 - 44, 3);
+  GLCD.CursorToXY(GLCD.Width/2 - 37, 4);
   GLCD.print("GLCD version ");
   GLCD.print(GLCD_VERSION, DEC);
-  GLCD.DrawRoundRect(8,0,GLCD.Width-19,17, 5);  // rounded rectangle around text area   
+  GLCD.DrawRoundRect(2,0,GLCD.Width-4,17, 5);  // rounded rectangle around text area   
   countdown(3);  
   GLCD.ClearScreen(); 
   scribble(5000);  // run for 5 seconds
   moveBall(6000); // kick ball for 6 seconds
   GLCD.SelectFont(SMALL_FONT, BLACK);
-  showCharacters("small:", SMALL_FONT);
+  showCharacters("TomThumb", SMALL_FONT);
   countdown(3);
-  showCharacters("large:", LARGE_FONT);
+  showCharacters("WebbySmall", LARGE_FONT);
   countdown(3);
   textAreaDemo();
   scrollingDemo();
