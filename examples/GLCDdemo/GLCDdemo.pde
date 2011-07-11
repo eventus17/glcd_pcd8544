@@ -13,11 +13,14 @@
 #include "fonts/allFonts.h"         // system and arial14 fonts are used
 #include "bitmaps/allBitmaps.h"       // all images in the bitmap dir 
 
+#define SMALL_FONT	TomThumb
+#define LARGE_FONT	WebbySmall
+
 Image_t icon;
 
 gText textArea;              // a text area to be defined later in the sketch
 gText textAreaArray[3];      // an array of text areas  
-gText countdownArea =  gText(GLCD.CenterX, GLCD.CenterY,1,1,Arial_14); // text area for countdown digits
+gText countdownArea =  gText(GLCD.CenterX, GLCD.CenterY,1,1,LARGE_FONT); // text area for countdown digits
 
 unsigned long startMillis;
 unsigned int  loops = 0;
@@ -31,7 +34,7 @@ void setup()
   introScreen();
   GLCD.ClearScreen(); 
 
-  GLCD.SelectFont(System5x7, BLACK); // font for the default text area
+  GLCD.SelectFont(SMALL_FONT, BLACK); // font for the default text area
 }
 
 void  loop()
@@ -55,13 +58,13 @@ void  loop()
   int fps_fract = (10000 % duration) * 10 / (duration/10);
   GLCD.ClearScreen();               // clear the screen  
   GLCD.CursorToXY(GLCD.CenterX + 6, 5);
-  GLCD.print("GLCD");
+  GLCD.print("GLCD ");
   GLCD.print(GLCD_VERSION, DEC);
   if(GLCD.Height <= 32)
     GLCD.CursorToXY(GLCD.CenterX + 6, 1);
   else  
     GLCD.CursorToXY(GLCD.CenterX + 6, 16);
-  //  GLCD.print("FPS=");                // print a text string
+  GLCD.print("FPS=");                // print a text string
   GLCD.print(fps);                  // print an integer value
   GLCD.print(".");
   if(fps_fract < 10)
@@ -74,7 +77,7 @@ void introScreen(){
   GLCD.DrawBitmap(icon, GLCD.CenterX - 32 ,0); //draw the bitmap at the given x,y position
   countdown(3);
   GLCD.ClearScreen();
-  GLCD.SelectFont(Arial_14); // you can also make your own fonts, see playground for details   
+  GLCD.SelectFont(LARGE_FONT); // you can also make your own fonts, see playground for details   
   GLCD.CursorToXY(GLCD.Width/2 - 44, 3);
   GLCD.print("GLCD version ");
   GLCD.print(GLCD_VERSION, DEC);
@@ -83,10 +86,10 @@ void introScreen(){
   GLCD.ClearScreen(); 
   scribble(5000);  // run for 5 seconds
   moveBall(6000); // kick ball for 6 seconds
-  GLCD.SelectFont(System5x7, BLACK);
-  showCharacters("5x7 font:", System5x7);
+  GLCD.SelectFont(SMALL_FONT, BLACK);
+  showCharacters("small:", SMALL_FONT);
   countdown(3);
-  showCharacters("Arial_14:", Arial_14);
+  showCharacters("large:", LARGE_FONT);
   countdown(3);
   textAreaDemo();
   scrollingDemo();
@@ -140,7 +143,7 @@ void showArea(predefinedArea area, char *description)
   GLCD.DrawBitmap(icon, 0,  0); 
   GLCD.DrawBitmap(icon, 64, 0); 
   textArea.DefineArea(area);
-  textArea.SelectFont(System5x7);
+  textArea.SelectFont(SMALL_FONT);
   textArea.SetFontColor(WHITE); 
   textArea.ClearArea(); 
   textArea.println(description);
@@ -187,14 +190,14 @@ void scrollingDemo()
 {
   GLCD.ClearScreen();  
   textAreaArray[0].DefineArea( textAreaTOPLEFT);  
-  textAreaArray[0].SelectFont(System5x7, WHITE);
+  textAreaArray[0].SelectFont(SMALL_FONT, WHITE);
   textAreaArray[0].CursorTo(0,0);
   textAreaArray[1].DefineArea( textAreaTOPRIGHT, SCROLL_DOWN);  // reverse scroll
-  textAreaArray[1].SelectFont(System5x7, BLACK);
+  textAreaArray[1].SelectFont(SMALL_FONT, BLACK);
   textAreaArray[1].CursorTo(0,0);
   textAreaArray[2].DefineArea(textAreaBOTTOM); 
 
-  textAreaArray[2].SelectFont(Arial_14, BLACK);
+  textAreaArray[2].SelectFont(LARGE_FONT, BLACK);
   textAreaArray[2].CursorTo(0,0);
 
   for(byte area = 0; area < 3; area++)
