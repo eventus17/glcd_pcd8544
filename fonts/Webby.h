@@ -68,7 +68,7 @@
 #define WEBBYSMALL_WIDTH 10
 #define WEBBYSMALL_HEIGHT 9
 
-static uint8_t WebbySmall[] PROGMEM = {
+static uint8_t WebbySmall[] __attribute__(( section(".progmem.data") )) = {
     0x10, 0xAD, // size
     0x0A, // width
     0x09, // height
@@ -190,7 +190,7 @@ static uint8_t WebbySmall[] PROGMEM = {
 #define WEBBYCAPS_WIDTH 10
 #define WEBBYCAPS_HEIGHT 7
 
-static uint8_t WebbyCaps[] PROGMEM = {
+static uint8_t WebbyCaps[] __attribute__(( section(".progmem.data") )) = {
     0x10, 0x3B, // size
     0x0A, // width
     0x07, // height

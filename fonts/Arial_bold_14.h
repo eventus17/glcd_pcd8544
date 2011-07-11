@@ -45,7 +45,7 @@
 #define ARIAL_BOLD_14_WIDTH 10
 #define ARIAL_BOLD_14_HEIGHT 14
 
-static uint8_t Arial_bold_14[] PROGMEM = {
+static uint8_t Arial_bold_14[] __attribute__(( section(".progmem.data") )) = {
     0x22, 0x08, // size
     0x0A, // width
     0x0E, // height

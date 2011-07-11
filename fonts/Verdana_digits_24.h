@@ -46,7 +46,7 @@ row
 #define VERDANA24_WIDTH 10
 #define VERDANA24_HEIGHT 24
 
-static uint8_t Verdana24[] PROGMEM = {
+static uint8_t Verdana24[] __attribute__(( section(".progmem.data") )) = {
     0x0E, 0xF9, // size
     0x0A, // width
     0x18, // height

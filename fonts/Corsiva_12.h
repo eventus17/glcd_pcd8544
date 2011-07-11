@@ -45,7 +45,7 @@
 #define CORSIVA_12_WIDTH 10
 #define CORSIVA_12_HEIGHT 11
 
-static uint8_t Corsiva_12[] PROGMEM = {
+static uint8_t Corsiva_12[] __attribute__(( section(".progmem.data") )) = {
     0x16, 0x3A, // size
     0x0A, // width
     0x0B, // height

@@ -8,6 +8,9 @@
  * so there is no penalty to including a font file here if its not used 
  */
 
+#ifndef _ALL_FONTS_H
+#define _ALL_FONTS_H
+
 #include "SystemFont5x7.h"       // system font
 #include "Arial14.h"             // proportional font
 #include "Arial_bold_14.h"       // Bold proportional font
@@ -27,3 +30,5 @@
 #include "F04b.h"		// A family of compact, stylish fonts
 #include "CalHenderson.h"	// Freeware fonts by Cal Henderson
 #include "dictator.h"		// a low-rez font in 4 and 8pts
+
+#endif // _ALL_FONTS_H

@@ -20,7 +20,7 @@
 #include <avr/pgmspace.h>
 
 
-static uint8_t fixednums15x31[] PROGMEM = {
+static uint8_t fixednums15x31[] __attribute__(( section(".progmem.data") )) = {
     0x0, 0x0,	// size of zero indicates fixed width font
     15,		// width
     31,		// height

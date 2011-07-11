@@ -72,7 +72,7 @@
 #define TOMTHUMB_WIDTH 10
 #define TOMTHUMB_HEIGHT 6
 
-static uint8_t TomThumb[] PROGMEM = {
+static uint8_t TomThumb[] __attribute__(( section(".progmem.data") )) = {
     0x06, 0x96, // size
     0x0A, // width
     0x06, // height

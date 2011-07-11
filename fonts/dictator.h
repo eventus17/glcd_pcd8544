@@ -48,7 +48,7 @@
 #define DICTATOR_WIDTH 10
 #define DICTATOR_HEIGHT 10
 
-static uint8_t dictator[] PROGMEM = {
+static uint8_t dictator[] __attribute__(( section(".progmem.data") )) = {
     0x08, 0xB4, // size
     0x0A, // width
     0x0A, // height
@@ -107,7 +107,7 @@ static uint8_t dictator[] PROGMEM = {
 #define DICTATOR4_WIDTH 10
 #define DICTATOR4_HEIGHT 5
 
-static uint8_t dictator4[] PROGMEM = {
+static uint8_t dictator4[] __attribute__(( section(".progmem.data") )) = {
     0x02, 0x5D, // size
     0x0A, // width
     0x05, // height

@@ -52,7 +52,7 @@
 
 #define Arial14 Arial_14 
 
-static uint8_t Arial_14[] PROGMEM = {
+static uint8_t Arial_14[] __attribute__(( section(".progmem.data") )) = {
     0x1E, 0x6C, // size
     0x0A, // width
     0x0E, // height

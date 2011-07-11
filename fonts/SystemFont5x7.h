@@ -45,7 +45,7 @@
 
 #define SystemFont5x7 System5x7
 
-static uint8_t System5x7[] PROGMEM = {
+static uint8_t System5x7[] __attribute__(( section(".progmem.data") )) = {
     0x0, 0x0, // size of zero indicates fixed width font, actual length is width * height
     0x05, // width
     0x07, // height

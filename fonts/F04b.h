@@ -59,7 +59,7 @@
 #define F04b_03_WIDTH 10
 #define F04b_03_HEIGHT 7
 
-static uint8_t F04b_03[] PROGMEM = {
+static uint8_t F04b_03[] __attribute__(( section(".progmem.data") )) = {
     0x09, 0x42, // size
     0x0A, // width
     0x07, // height
@@ -179,7 +179,7 @@ static uint8_t F04b_03[] PROGMEM = {
 #define F04B_03B_WIDTH 10
 #define F04B_03B_HEIGHT 6
 
-static uint8_t F04b_03b[] PROGMEM = {
+static uint8_t F04b_03b[] __attribute__(( section(".progmem.data") )) = {
     0x08, 0x1C, // size
     0x0A, // width
     0x06, // height
@@ -299,7 +299,7 @@ static uint8_t F04b_03b[] PROGMEM = {
 #define F04B_08_WIDTH 10
 #define F04B_08_HEIGHT 5
 
-static uint8_t F04b_08[] PROGMEM = {
+static uint8_t F04b_08[] __attribute__(( section(".progmem.data") )) = {
     0x08, 0x59, // size
     0x0A, // width
     0x05, // height
@@ -420,7 +420,7 @@ static uint8_t F04b_08[] PROGMEM = {
 #define F04B_09_WIDTH 10
 #define F04B_09_HEIGHT 7
 
-static uint8_t F04b_09[] PROGMEM = {
+static uint8_t F04b_09[] __attribute__(( section(".progmem.data") )) = {
     0x0E, 0x35, // size
     0x0A, // width
     0x07, // height
@@ -541,7 +541,7 @@ static uint8_t F04b_09[] PROGMEM = {
 #define F04B_11_WIDTH 10
 #define F04B_11_HEIGHT 7
 
-static uint8_t F04b_11[] PROGMEM = {
+static uint8_t F04b_11[] __attribute__(( section(".progmem.data") )) = {
     0x0E, 0x0B, // size
     0x0A, // width
     0x07, // height
@@ -661,7 +661,7 @@ static uint8_t F04b_11[] PROGMEM = {
 #define F04B_19_WIDTH 10
 #define F04B_19_HEIGHT 14
 
-static uint8_t F04b_19[] PROGMEM = {
+static uint8_t F04b_19[] __attribute__(( section(".progmem.data") )) = {
     0x22, 0x94, // size
     0x0A, // width
     0x0E, // height
@@ -782,7 +782,7 @@ static uint8_t F04b_19[] PROGMEM = {
 #define F04B_20_WIDTH 10
 #define F04B_20_HEIGHT 8
 
-static uint8_t F04b_20[] PROGMEM = {
+static uint8_t F04b_20[] __attribute__(( section(".progmem.data") )) = {
     0x18, 0xA6, // size
     0x0A, // width
     0x08, // height
@@ -903,7 +903,7 @@ static uint8_t F04b_20[] PROGMEM = {
 #define F04B_21_WIDTH 10
 #define F04B_21_HEIGHT 5
 
-static uint8_t F04b_21[] PROGMEM = {
+static uint8_t F04b_21[] __attribute__(( section(".progmem.data") )) = {
     0x08, 0x59, // size
     0x0A, // width
     0x05, // height
@@ -1024,7 +1024,7 @@ static uint8_t F04b_21[] PROGMEM = {
 #define F04B_24_WIDTH 10
 #define F04B_24_HEIGHT 6
 
-static uint8_t F04b_24[] PROGMEM = {
+static uint8_t F04b_24[] __attribute__(( section(".progmem.data") )) = {
     0x06, 0x84, // size
     0x0A, // width
     0x06, // height
@@ -1144,7 +1144,7 @@ static uint8_t F04b_24[] PROGMEM = {
 #define F04B_25_WIDTH 10
 #define F04B_25_HEIGHT 11
 
-static uint8_t F04b_25[] PROGMEM = {
+static uint8_t F04b_25[] __attribute__(( section(".progmem.data") )) = {
     0x13, 0xF3, // size
     0x0A, // width
     0x0B, // height
@@ -1265,7 +1265,7 @@ static uint8_t F04b_25[] PROGMEM = {
 #define F04B_31_WIDTH 10
 #define F04B_31_HEIGHT 10
 
-static uint8_t F04b_31[] PROGMEM = {
+static uint8_t F04b_31[] __attribute__(( section(".progmem.data") )) = {
     0x28, 0xFC, // size
     0x0A, // width
     0x0A, // height

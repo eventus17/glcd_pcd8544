@@ -65,7 +65,7 @@
 #define TINY_WIDTH 10
 #define TINY_HEIGHT 5
 
-static uint8_t Tiny[] PROGMEM = {
+static uint8_t Tiny[] __attribute__(( section(".progmem.data") )) = {
     0x05, 0xE8, // size
     0x0A, // width
     0x05, // height

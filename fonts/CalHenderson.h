@@ -47,7 +47,7 @@
 #define SMALLHOLLOWS_WIDTH 10
 #define SMALLHOLLOWS_HEIGHT 7
 
-static uint8_t SmallHollows[] PROGMEM = {
+static uint8_t SmallHollows[] __attribute__(( section(".progmem.data") )) = {
     0x0B, 0x64, // size
     0x0A, // width
     0x07, // height
